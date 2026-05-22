@@ -10,7 +10,7 @@ All notable changes to the ruleset are recorded here. Versioning: **MAJOR** = ch
 
 *(Why not the page/DXF route: headless `DrawViewPart.execute()` does not run HLR without the GUI, so `writeDXFPage` exports empty geometry — driving the `TechDraw.project()` HLR engine directly is the headless-correct path.)*
 
-Also nudged the `blockchain_economy` panel-C revenue boxes inward for clean right margins. Whitepaper recompiled (9 pp); all figures re-audited free of text bleed.
+Also nudged the `blockchain_economy` panel-C revenue boxes inward for clean right margins, and **recomposed the `car_3d` lit-render figure** (Figure 3): the iso + side panels are now auto-cropped to content and stacked (prominent isometric over a full-width side strip) with a tightened ground plane — replacing the old layout that floated a tiny side view in whitespace. Whitepaper recompiled (9 pp); all figures re-audited free of text bleed.
 
 ## [0.5.5] — 2026-05-22 — Fixed figure text-bleed + maximal local render (Blender hero)
 

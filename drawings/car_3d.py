@@ -71,11 +71,11 @@ def to_mesh(solid, tol=1.0):
     return pv.PolyData(pts, f.ravel())
 
 pv.OFF_SCREEN=True
-ground = pv.Plane(center=(L/2,0,0), direction=(0,0,1), i_size=L*1.7, j_size=L*1.2)
+ground = pv.Plane(center=(L/2,0,0), direction=(0,0,1), i_size=L*1.22, j_size=L*0.72)
 meshes = [(to_mesh(s), c) for s,c in parts]
 
-def render(view, fname):
-    pl = pv.Plotter(off_screen=True, window_size=(1500,1050), border=False)
+def render(view, fname, wsize, zoom):
+    pl = pv.Plotter(off_screen=True, window_size=wsize, border=False)
     pl.set_background("white")
     pl.add_mesh(ground, color=(0.95,0.96,0.97), ambient=0.55, diffuse=0.45, specular=0)
     for m,c in meshes:
@@ -83,27 +83,42 @@ def render(view, fname):
                     ambient=0.30, diffuse=0.80)
     if view=="iso": pl.view_isometric()
     else: pl.camera_position="xz"               # side profile (length x height)
-    pl.camera.zoom(1.35)
+    pl.camera.zoom(zoom)
     try: pl.enable_anti_aliasing("ssaa")
     except Exception: pass
     try: pl.enable_shadows()
     except Exception: pass
     pl.screenshot(fname); pl.close()
 
-render("iso",  os.path.join(OUT,"_car3d_iso.png"))
-render("side", os.path.join(OUT,"_car3d_side.png"))
+# window aspect matched to each view's natural framing (squarer iso, wide-short side)
+render("iso",  os.path.join(OUT,"_car3d_iso.png"),  (1300,1120), 1.62)
+render("side", os.path.join(OUT,"_car3d_side.png"), (1950, 720), 1.55)
 
-# compose iso + side -> car_3d.png/pdf for LaTeX
+# compose iso (hero, top) + side (full-width strip, below) -> car_3d.png/pdf for LaTeX
 import matplotlib; matplotlib.use("Agg"); import matplotlib.pyplot as plt
-iso = plt.imread(os.path.join(OUT,"_car3d_iso.png")); sde = plt.imread(os.path.join(OUT,"_car3d_side.png"))
-fig = plt.figure(figsize=(11,4.6))
-a1=fig.add_axes([0.00,0.02,0.60,0.86]); a1.imshow(iso); a1.axis("off"); a1.set_title("ISOMETRIC",fontsize=10,color="#1b2430")
-a2=fig.add_axes([0.60,0.02,0.40,0.86]); a2.imshow(sde); a2.axis("off"); a2.set_title("SIDE",fontsize=10,color="#1b2430")
-fig.suptitle("FORMULA ZYNERJI — PARAMETRIC 3D GENERAL ARRANGEMENT  (CadQuery → STEP)",
-             fontsize=12, fontweight="bold", color="#1b2430", x=0.02, ha="left")
-fig.text(0.02,0.01,"Lofted parametric solid from the dimensional set (WB 3300 · L 4850 · W 1800 · 18\" wheels). "
-         "STEP: car_3d.step.", fontsize=8, color="#7a8694")
-fig.savefig(os.path.join(OUT,"car_3d.png"), dpi=150, bbox_inches="tight")
+def autocrop(img, thr=0.93, pad=12):                       # trim near-white margins to content
+    rgb = img[..., :3]; mask = (rgb < thr).any(2)
+    if not mask.any(): return img
+    ys, xs = np.where(mask)
+    y0 = max(0, ys.min()-pad); y1 = min(img.shape[0], ys.max()+1+pad)
+    x0 = max(0, xs.min()-pad); x1 = min(img.shape[1], xs.max()+1+pad)
+    return img[y0:y1, x0:x1]
+iso = autocrop(plt.imread(os.path.join(OUT,"_car3d_iso.png")))
+sde = autocrop(plt.imread(os.path.join(OUT,"_car3d_side.png")))
+ari = iso.shape[1]/iso.shape[0]; ars = sde.shape[1]/sde.shape[0]
+W = 6.6                                                     # figure width (in)
+iso_w = 0.74*W; iso_h = iso_w/ari                           # iso centred on top
+sde_w = W;       sde_h = sde_w/ars                          # side full-width strip below
+lab, gap, mb = 0.34, 0.30, 0.06
+Hf = mb + sde_h + lab + gap + iso_h + lab
+fig = plt.figure(figsize=(W, Hf))
+ax_i = fig.add_axes([(W-iso_w)/2/W, (mb+sde_h+lab+gap)/Hf, iso_w/W, iso_h/Hf])
+ax_i.imshow(iso); ax_i.axis("off")
+ax_i.set_title("ISOMETRIC", fontsize=11, fontweight="bold", color="#1b2430")
+ax_s = fig.add_axes([0.0, mb/Hf, sde_w/W, sde_h/Hf])
+ax_s.imshow(sde); ax_s.axis("off")
+ax_s.set_title("SIDE ELEVATION", fontsize=11, fontweight="bold", color="#1b2430")
+fig.savefig(os.path.join(OUT,"car_3d.png"), dpi=200, bbox_inches="tight")
 fig.savefig(os.path.join(OUT,"car_3d.pdf"), bbox_inches="tight"); plt.close(fig)
 for t in ("_car3d_iso.png","_car3d_side.png","_pvtest.png"):
     p=os.path.join(OUT,t)
