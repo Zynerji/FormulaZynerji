@@ -33,7 +33,7 @@ The nine design razors and the mechanism catalog (M1–M9) live in `design/mecha
 - Each substantive rule should name the **mechanism (Mx)** and **distortion** it serves — ideally in a one-line rationale note.
 - Capitalised **Defined Terms** live in `glossary.md`.
 - Mark unresolved decisions and calibrations with `> TODO:` blockquotes (greppable).
-- Headline numbers (cap value ≈$75M, floor ≈70%, points curve, engine figures) are **placeholders for coherence**, not sacred — flag as tunable.
+- Headline numbers: cap **$75M** and floor **80%** are now **model-pinned** (`design/economic-modeling.md`); points curve + engine figures remain first-pass.
 - Don't invent false precision. Cite real FIA figures from `reference/` where relevant; say so where we're choosing.
 
 ## Where things live
@@ -52,7 +52,7 @@ The nine design razors and the mechanism catalog (M1–M9) live in `design/mecha
 
 ## Open calibrations / decisions (see `design/mechanism-design.md` §5 and `> TODO:` markers)
 
-- Cap value (≈$75M first-pass); minimum-spend floor level (≈70%) + origination share — the keystone calibration.
+- Cap **$75M** + floor **80% of cap** = model-pinned (`design/economic-modeling.md`). Open: origination minimum N (≥half of dev, raisable); multi-year cap trajectory.
 - Dirty-air wake metric + rig + the wake→downforce-allowance schedule (design-stage, not BoP).
 - Points vector (40→1, all-22-score); drop-results were removed.
 - Driver-merit rating: **advisory** (decided).

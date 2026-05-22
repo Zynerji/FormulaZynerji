@@ -22,8 +22,7 @@
 
 > Spend is bracketed **[floor, cap]**. The **cap** stops money buying results; the **floor** stops teams free-riding on the shared design pool *and* forces the continuous innovation that keeps the self-balancing economy (Art. 3) alive. A tight band also equalizes inputs.
 
-2.1 **Cap — single, hard, equal: ≈ $75 M per season** (first-pass) for every entrant, published as a multi-year trajectory at launch.
-   > Set well below F1 (~$135 M+) deliberately: forced disclosure removes most *duplicated* R&D (you copy a solved problem rather than re-solving it in secret), so a serious car can be fielded for less — which also widens the grid (accessibility). Tunable.
+2.1 **Cap — single, hard, equal: $75 M per season** for every entrant, published as a multi-year trajectory at launch. **Pinned by the cost model** (`design/economic-modeling.md`, Part A): the bottom-up build puts a *competent program* at ~$67 M and the *running-cost floor* at ~$56 M, so $75 M is ~1.1× competent (a genuinely tight cap) with ~$19 M of real development headroom, while still binding the ~55% of prospective entrants who would outspend it. It is also a forcing function — only feasible *with* the lean, sharing-enabled operating model. Band: $70–80 M.
 
 2.2 **No luxury-tax / soft-cap lane.** Overspend is a **breach** (Art. 5), not a payable option — a soft cap re-admits money as a performance lever, fatal to a meritocracy.
 
@@ -33,13 +32,13 @@
 
 2.5 **Indexation:** cap adjusts by a published formula (CPI + a per-extra-event supplement) so calendar length doesn't silently move it.
 
-2.6 **Minimum Development Spend — the floor (M12): ≥ 70 % of the cap (≈ $52 M)** must be spent on performance development each season. This destroys free-riding *and* is the keystone of the self-balancing economy: a team **cannot** run a copy-only operation living off the shared pool — it must keep developing. (Forced disclosure makes innovation a public good; a voluntary public-goods game under-provides, so contribution is **mandatory**.)
+2.6 **Minimum Development Spend — the floor (M12): ≥ 80 % of the cap (≈ $60 M)** must be spent on performance development each season. **Pinned by the model** (`design/economic-modeling.md`, Part B): the running-cost floor is ~75 % of the cap, so a *lower* floor wouldn't bite (every team already spends that just to exist) — the floor must sit just **above running** to force genuine development. This destroys free-riding *and* is the keystone of the self-balancing economy: a team **cannot** run a copy-only operation living off the shared pool. The tight `[80 %, 100 %]` band also strongly equalizes inputs. (Forced disclosure makes innovation a public good; the game confirms teams self-select only ~13 % original-R&D with no floor — so contribution is made **mandatory**.)
 
-2.7 **Origination teeth (M12).** A pure dollar floor could be met by spending on *copying and manufacturing* while still free-riding on *design*. So **≥ half of the development spend (and ≥ [N] significant components per season) must be original on-chain work** — declared original under `technical.md` Art. 9.2 and passing the novelty/similarity check. The floor must *feed the commons*, not merely be burned.
+2.7 **Origination teeth (M12).** A pure dollar floor could be met by spending on *copying and manufacturing* while still free-riding on *design*. So **≥ half of the development spend (and ≥ [N] significant components per season) must be original on-chain work** — declared original under `technical.md` Art. 9.2 and passing the novelty/similarity check. The model shows sport-vitality rises with the origination share at *no* cost to fairness or field-compression (copying handles those), so this is a deliberately conservative, **raisable** floor — set at half to preserve room for the copying/integration the accessibility case depends on.
 
 2.8 **Shortfall penalty.** Failing the floor or origination minimum is a breach (Art. 5): the shortfall is paid into the data-revenue redistribution pool (Art. 8.2), plus a **future-cap reduction**; persistent free-riding escalates toward exclusion.
 
-> TODO: ratify $75 M cap, the 70 % floor, the CapEx allowance, the origination minimum N, and the multi-year trajectory.
+> TODO: ratify the origination minimum N and the multi-year cap trajectory. (Cap $75 M, floor 80 %, CapEx $30 M/3 yr now model-pinned — see `design/economic-modeling.md`.)
 
 ---
 

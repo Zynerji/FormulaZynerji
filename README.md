@@ -2,7 +2,7 @@
 
 **A redesign of the Formula 1 rulebook as mechanism design — built on a blockchain that forces every team to share its designs, so that cost and effort are synthesized into *merit* and the genuinely best team and driver win.**
 
-> Status: **v0.5.0 — draft** (car systems-complete; competition built out; token-free self-balancing economy) · License: [`LICENSE`](LICENSE) (CC BY-SA 4.0) · Maintainer: cknopp@gmail.com
+> Status: **v0.5.1 — draft** (car + competition complete; token-free self-balancing economy; cap & floor model-pinned) · License: [`LICENSE`](LICENSE) (CC BY-SA 4.0) · Maintainer: cknopp@gmail.com
 
 ---
 

@@ -173,7 +173,7 @@ Each entry: **Distortion targeted · Problem (history + theory) · Mechanism · 
 - **Token-free economy (v0.5.0).** The whole development-token / auction (M2) and success-handicap (M3) apparatus was **removed**: the disclosure economy self-balances by copying. The remaining economic levers are just the **cap** and the **floor** (`financial.md` Art. 3). This is the biggest simplification in the project's history.
 - **Driver rating (M7).** Advisory vs binding is a genuine fork — binding maximizes driver-merit accuracy but invites team-order gaming. *Recommend advisory first.*
 - **Dirty-air price (M4).** Implemented as a **design-stage downforce allowance** (no tokens) — must stay input-side (set at homologation) to avoid becoming BoP.
-- **M12 floor level (the keystone calibration).** The floor (≈70% of cap, first-pass) is now *the* lever that keeps innovation alive in a token-free copy economy. Too low → pure-copy stagnation; high → strong input-equalization + sustained innovation. Lean high. Plus the origination share (≈half of dev spend must be original).
+- **M12 floor level (the keystone calibration) — model-pinned at 80% of cap** (`design/economic-modeling.md`). The game confirms: with no floor, teams self-select only ~13% original-R&D (the under-provision); vitality rises monotonically with the floor at *no* cost to merit or compression; and the floor must exceed the ~75%-of-cap running floor to bite. So 80% (just above running) + origination ≈half of dev (raisable — vitality rewards more, capped only by affordability).
 - **Cap value.** ≈$75M first-pass (≈half F1, justified by shared-design R&D savings). The other genuinely-open headline number.
 
 ---

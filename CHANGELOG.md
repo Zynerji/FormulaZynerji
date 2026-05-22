@@ -2,6 +2,15 @@
 
 All notable changes to the ruleset are recorded here. Versioning: **MAJOR** = change to the objective or core mechanism set; **MINOR** = new article/mechanism; **PATCH** = clarification/typo. Mechanism *calibration* changes should be justified against the objective (does it improve `corr(Standings, Merit)`?) and logged with that justification.
 
+## [0.5.1] — 2026-05-22 — Economic modeling: cap & floor pinned
+
+Built an explicit model (`modeling/economy_model.py`, reproducible/seeded; write-up in `design/economic-modeling.md`) to pin the two keystone numbers instead of guessing.
+- **Cap = $75M** (validated): bottom-up cost build puts a competent program at ~$67M, running floor ~$56M, so $75M is ~1.1x competent (tight), ~$19M dev headroom, still binds ~55% of would-be over-spenders.
+- **Floor = 80% of cap (~$60M)** — *corrected up from 70%*: the model showed the running floor is ~75% of the cap, so a 70% floor wouldn't bite. The floor must sit just above running to force development.
+- **Free-rider problem quantified:** with no floor, teams self-select only **~13%** original-R&D — empirically confirming M12 as the keystone.
+- **Honest finding:** vitality rises *monotonically* with the floor at no cost to merit-correlation (~0.97) or field-compression — so the floor is a pure vitality-vs-affordability lever (no internal optimum); origination share kept at ~half (raisable) to preserve copying room.
+- Synced cap/floor figures across financial.md, mechanism-design.md, CLAUDE.md. Plots: `modeling/cap_accessibility.png`, `modeling/floor_sweep.png`.
+
 ## [0.5.0] — 2026-05-22 — Token-free economy: financials added, self-balance (M2/M3 removed)
 
 User decision: **no token system.** The forced-disclosure economy self-balances, so the development-token currency, development auction (M2), and success handicap (M3) are **all removed** — the biggest simplification in the project's history.
