@@ -2,6 +2,12 @@
 
 All notable changes to the ruleset are recorded here. Versioning: **MAJOR** = change to the objective or core mechanism set; **MINOR** = new article/mechanism; **PATCH** = clarification/typo. Mechanism *calibration* changes should be justified against the objective (does it improve `corr(Standings, Merit)`?) and logged with that justification.
 
+## [0.5.5] — 2026-05-22 — Fixed figure text-bleed + maximal local render (Blender hero)
+
+**Text bleed fixed & audited.** The `blockchain_economy` flowchart had labels overflowing their boxes (panel A legality boxes, panel C revenue boxes) — rebuilt with properly-sized boxes and concise labels. Audited every figure in the compiled PDF (blockchain, engine, 3D GA, diff, car GA, model plots): all text now contained.
+
+**Maximal local render stack** (no GPU): installed **Blender 5.1** (Cycles path-tracer) + **FreeCAD**. New pipeline — `drawings/car_3d.py` dumps mesh+colors to JSON → `drawings/blender_render.py` builds it with PBR materials, sun+area lighting, ground shadow, CPU path-tracing + denoise → **`car_hero.png`**, added as the whitepaper **cover render** (now 9 pp).
+
 ## [0.5.4] — 2026-05-22 — Upgraded 3D GA render (PyVista, no GPU)
 
 `drawings/car_3d.py` reworked: a **lofted** CadQuery body (smooth taper + nose + sidepods + halo arc) replaces the blocky primitives, rendered with **PyVista** (real lighting, anti-aliasing, ground shadow) in lit isometric + side views. STEP re-exported (`car_3d.step`). Whitepaper recompiled with the new figure. (Technical figures kept accurate/parametric — no generative AI; the GPU/diffusion route was considered and deferred.)

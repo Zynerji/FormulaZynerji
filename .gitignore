@@ -17,3 +17,6 @@ Thumbs.db
 # Python
 __pycache__/
 *.pyc
+
+# generated mesh intermediate (rebuilt by drawings/car_3d.py for the Blender render)
+drawings/car_parts.json

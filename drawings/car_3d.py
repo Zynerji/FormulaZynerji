@@ -55,6 +55,14 @@ except Exception as e:
 # --- export STEP ---
 cq.exporters.export(cq.Compound.makeCompound([s for s,_ in parts]), os.path.join(OUT,"car_3d.step"))
 
+# --- dump tessellated mesh + colors as JSON (for the Blender renderer) ---
+import json
+_dump=[]
+for _solid,_c in parts:
+    _vs,_ts=_solid.tessellate(0.8)
+    _dump.append({"color":list(_c),"verts":[[v.x,v.y,v.z] for v in _vs],"faces":[list(t) for t in _ts]})
+json.dump(_dump, open(os.path.join(OUT,"car_parts.json"),"w"))
+
 # --- render with PyVista ---
 def to_mesh(solid, tol=1.0):
     vs, ts = solid.tessellate(tol)
