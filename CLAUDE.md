@@ -9,7 +9,8 @@ Working context for AI-assisted editing. Read this before touching the rules.
 - **Objective:** meritocracy — the genuinely best team and driver should win. The championship is a *measurement instrument* for merit.
 - **Method:** game theory + revealed history. Design for the **equilibrium** behaviour, using how teams actually responded to past F1 rules as data.
 - **Scope:** an era-kitbash F1-derived car + a 2-stroke diesel + **new game-theoretic mechanisms** (not an open formula; not a spec series; not BoP).
-- **The spine:** a **blockchain** holding Rules/Designs/Data/Manpower. **Only on-chain parts are legal** (M10); innovators get a natural head-start + originator rewards (M11). This is the load-bearing concept — read `design/blockchain-architecture.md` before editing the car or financial rules.
+- **The spine:** a **blockchain** holding Rules/Designs/Data/Manpower. **Only on-chain parts are legal** (M10); the innovator's reward is the natural head-start + recognition (M11) — **no tokens**. This is the load-bearing concept — read `design/blockchain-architecture.md` before editing the car or financial rules.
+- **Economy is token-free (v0.5.0):** no development tokens, no auction (M2), no success handicap (M3) — all removed. The field **self-balances by copying**; the only economic levers are the **money cap (M1)** and the **minimum-spend floor (M12, the keystone)**. The dirty-air price (M4) is a design-stage downforce allowance, not a token charge.
 - **The car:** 2026 wings/floor/tyres/safety · 2021 hydraulic interconnected suspension · 2013 gearbox + **driver-vectored diff** · 2008 dimensions/body, **3300 mm** wheelbase, **605 kg** min, ~80 kg fuel. **Engine:** 2.5 L I5 two-stroke diesel, screw (Lysholm) supercharged, JP-8, **electronically-controlled VLEM** (set-and-run), no traction hybrid, spec-base + open zones, **~1015 hp / ~1035 N·m** (BMEP 26, 7000 rpm). Aero disciplined by dirty-air pricing (M4); no DRS. **Art 8.4 principle: automate the engine, never the driving** (manual driver inputs permitted; auto engine-optimization permitted+locked; auto car-control aids banned).
 
 > History note: this was briefly framed as "Open Formula" (an open/anything-goes box). That was wrong and is fully superseded. If you find stray "open formula / open-class / outcome-not-component / the Box" language in older files, treat it as legacy and reframe it toward meritocracy + mechanism design.
@@ -32,7 +33,7 @@ The nine design razors and the mechanism catalog (M1–M9) live in `design/mecha
 - Each substantive rule should name the **mechanism (Mx)** and **distortion** it serves — ideally in a one-line rationale note.
 - Capitalised **Defined Terms** live in `glossary.md`.
 - Mark unresolved decisions and calibrations with `> TODO:` blockquotes (greppable).
-- Headline numbers (cap value, token endowment, points curve, handicap curve) are **placeholders for coherence**, not sacred — flag as tunable.
+- Headline numbers (cap value ≈$75M, floor ≈70%, points curve, engine figures) are **placeholders for coherence**, not sacred — flag as tunable.
 - Don't invent false precision. Cite real FIA figures from `reference/` where relevant; say so where we're choosing.
 
 ## Where things live
@@ -51,9 +52,9 @@ The nine design razors and the mechanism catalog (M1–M9) live in `design/mecha
 
 ## Open calibrations / decisions (see `design/mechanism-design.md` §5 and `> TODO:` markers)
 
-- Cap value; token endowment; auction format (lean near-strategy-proof).
-- Handicap curve strength (calibrate vs historical gap-decay; avoid merit inversion).
-- Dirty-air wake metric + rig + price currency (must stay input-side, not BoP).
-- Points vector + drop-results N-of-K + whether to field-strength-weight.
-- Driver-merit rating: **advisory vs binding** (recommend advisory first).
+- Cap value (≈$75M first-pass); minimum-spend floor level (≈70%) + origination share — the keystone calibration.
+- Dirty-air wake metric + rig + the wake→downforce-allowance schedule (design-stage, not BoP).
+- Points vector (40→1, all-22-score); drop-results were removed.
+- Driver-merit rating: **advisory** (decided).
+- (Tokens/auction/handicap removed v0.5.0 — no longer calibrations.)
 - The deliberate luck-variance *floor* left in for entertainment.

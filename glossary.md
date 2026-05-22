@@ -21,7 +21,7 @@ Defined Terms are Capitalised throughout the regulations. The rules lean on thes
 - **Upload Deadline** — the start-of-event moment by which all run parts must be uploaded; the disclosure moment from which rivals may copy.
 - **Forced Disclosure** — the mandatory sharing of CAD/FEA/CFD for every run part; converts R&D from a private good to a club good. Mechanism M10.
 - **Natural Lead** — the head-start an innovator gets purely from rivals' manufacturing/integration lag (no formal embargo).
-- **Originator Reward (M11)** — Development Tokens (+ Innovation Index credit) earned by the first uploader of an innovation when other teams adopt it.
+- **Innovation Incentive (M11)** — the reward for innovating, **token-free (v0.5.0)**: the transient on-track head-start + reputational Innovation Index credit. No payment, no championship bounty.
 - **Innovation Index** — the published record of originator credit.
 - **Provenance Declaration** — the on-upload statement that a part is *original* or *derived from element X*; basis of attribution.
 - **Scrutineering-by-Hash** — verifying a fitted part matches its on-chain record (geometry hash + material).
@@ -55,9 +55,8 @@ Defined Terms are Capitalised throughout the regulations. The rules lean on thes
 - **Minimum Development Spend (Floor)** — the mandatory minimum each team must spend on performance development; destroys free-riding. Mechanism M12.
 - **Origination Floor / Teeth** — the requirement that a defined share of the floor produce *original* on-chain designs (≥ N novel uploads), so the spend feeds the commons rather than copying. Mechanism M12.
 - **Relevant Costs / Exclusions** — what counts toward the cap / the short bright-line excluded list.
-- **Development Token** — the equal-endowment currency teams spend to acquire scarce development resource. Mechanism M2.
-- **Development Auction** — the periodic near-strategy-proof market that allocates wind-tunnel / CFD / dyno / track / sim resource. Mechanism M2.
-- **Merit-Weighted Handicap** — the reduction of a successful team's *future* Development Tokens/resource; acts on inputs only, never current performance. Mechanism M3.
+- **Self-Balancing Economy** — the field balances without artificial currency: disclosure makes advantages transient (copied away), the championship pulls everyone to the best on-chain parts, and the floor forces continuous innovation. Replaced tokens/auction/handicap (v0.5.0). `financial.md` Art. 3.
+- **Development Token / Auction / Merit-Weighted Handicap (M2/M3)** — *removed v0.5.0.* The token currency, development auction, and success handicap are gone; development is limited by money (the cap) and the field self-balances by copying.
 - **Reporting Group** — entrant + controlled subsidiaries + related parties; the scope of every limit.
 - **Balance of Performance (BoP)** — post-hoc weight/power equalization of *outputs*. **Formula Zynerji does not use BoP**; the term names what we reject.
 

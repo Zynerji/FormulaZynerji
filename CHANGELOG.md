@@ -2,6 +2,18 @@
 
 All notable changes to the ruleset are recorded here. Versioning: **MAJOR** = change to the objective or core mechanism set; **MINOR** = new article/mechanism; **PATCH** = clarification/typo. Mechanism *calibration* changes should be justified against the objective (does it improve `corr(Standings, Merit)`?) and logged with that justification.
 
+## [0.5.0] — 2026-05-22 — Token-free economy: financials added, self-balance (M2/M3 removed)
+
+User decision: **no token system.** The forced-disclosure economy self-balances, so the development-token currency, development auction (M2), and success handicap (M3) are **all removed** — the biggest simplification in the project's history.
+
+**Financials added (`financial.md` v0.5.0), concrete first-pass numbers:**
+- **Cap ≈ $75 M/season** (≈half F1 — shared-design disclosure removes most duplicated R&D + widens the grid). Hard, equal, no luxury-tax lane.
+- **Minimum-spend floor ≈ 70 % of cap (≈$52 M)**, of which **≥ half must be original on-chain work** — now the **keystone**: it forces continuous innovation, foreclosing the only bad equilibrium of a token-free copy economy (everyone copies, nobody innovates).
+- CapEx ≈ $30 M/3 yr; standard exclusions; CPI+race indexation; penalties = fine + **future-cap reduction** (no token docking).
+- **Article 3 "The Self-Balancing Economy"**: disclosure makes advantages transient (copied away → field compresses); the championship pulls everyone to the best on-chain parts; re-leading needs new innovation. Dynasties solved **without a handicap**. Development limited by **money alone** (no ATR/auction).
+
+**Synced everywhere:** M2/M3 marked removed and M11 reframed token-free (reward = head-start + Innovation Index *recognition only*) in `mechanism-design.md`, `blockchain-architecture.md`, `philosophy.md`; **M4 dirty-air re-currencied to a design-stage downforce allowance** (`technical.md` Art. 3.3); sporting/glossary/README/CLAUDE scrubbed of token/auction/handicap. (Real-F1 "token" references in `reference/` and `f1-historical-eras.md` left intact.)
+
 ## [0.4.3] — 2026-05-22 — Renamed to Formula Zynerji + first git push
 
 Project **renamed: Formula Synthesis → Formula Zynerji** (Zynerji org branding) throughout all docs and the repo folder. Initialized git and pushed to GitHub (Zynerji org). Lineage: *Open Formula* (v0.1, superseded) → *Formula Synthesis* (v0.2–0.4.2) → **Formula Zynerji** (v0.4.3).

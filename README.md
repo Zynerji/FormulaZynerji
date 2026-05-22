@@ -2,7 +2,7 @@
 
 **A redesign of the Formula 1 rulebook as mechanism design — built on a blockchain that forces every team to share its designs, so that cost and effort are synthesized into *merit* and the genuinely best team and driver win.**
 
-> Status: **v0.4.0 — draft** (car systems-complete; competition side built out) · License: [`LICENSE`](LICENSE) (CC BY-SA 4.0) · Maintainer: cknopp@gmail.com
+> Status: **v0.5.0 — draft** (car systems-complete; competition built out; token-free self-balancing economy) · License: [`LICENSE`](LICENSE) (CC BY-SA 4.0) · Maintainer: cknopp@gmail.com
 
 ---
 
@@ -16,9 +16,10 @@ Formula Zynerji re-derives the F1 rulebook from one objective — **meritocracy*
 |---|---|
 | **What's on the chain** | Rules · Designs · Data · Manpower — immutable, timestamped |
 | **The legality rule (M10)** | Only parts uploaded on-chain by the weekend's Upload Deadline may run |
-| **Why teams accept sharing** | They have no choice — and the head-start (manufacturing lag) + originator rewards make innovating still pay |
-| **The innovator's incentive (M11)** | Natural lead (rivals must build your part) + on-chain tokens earned each time a rival adopts your design |
-| **No free-riding (M12)** | A mandatory minimum spend + minimum original-design output — copy-only teams are impossible; everyone must feed the commons |
+| **Why teams accept sharing** | They have no choice — and the head-start (manufacturing lag) makes innovating still pay |
+| **The innovator's incentive (M11)** | Natural lead (rivals must build your part) + reputational recognition (Innovation Index). **No tokens, no bounty** |
+| **No free-riding (M12)** | A mandatory minimum spend + minimum original-design output — copy-only teams are impossible; the floor is the keystone that keeps innovation alive |
+| **Self-balancing economy** | No tokens, no auction, no handicap — advantages are copied away (field compresses), the championship pulls everyone to the best parts, the floor forces innovation |
 | **Self-policing** | Scrutineering = verifying each part matches its immutable on-chain hash; secret/back-dated parts are impossible |
 | **Revenue** | Chain data sells to media/public; revenue redistributed toward smaller teams |
 
@@ -59,7 +60,7 @@ FormulaZynerji/
 │   ├── technical.md           ←   the era-kitbash car + diesel + dirty-air pricing + on-chain legality
 │   ├── sporting.md            ←   the competition as a merit estimator + scrutineering-by-hash
 │   ├── safety.md              ←   the non-negotiable invariant (a constraint, not an objective)
-│   └── financial.md           ←   money-neutral cap + dev auctions + originator rewards + data revenue
+│   └── financial.md           ←   money-neutral cap + minimum-spend floor + self-balancing economy (no tokens)
 ├── design/                    ← the "why"
 │   ├── philosophy.md          ←   the meritocracy thesis
 │   ├── mechanism-design.md    ←   the framework + mechanism catalog M1–M11 (the novel core)

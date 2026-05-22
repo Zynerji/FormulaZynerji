@@ -46,15 +46,15 @@ So we replace **patches with cures**. The canonical example: real F1 added DRS t
 
 1. **Equalize inputs** — a hard, money-neutral budget cap; a common safety floor; controlled supply of standard parts.
 2. **Differentiate on merit** — leave engineering and driving genuinely free to matter, and *measure them cleanly*.
-3. **Prevent dynasties without inverting merit** — handicap *future inputs* (development resource), **never** *current outputs*. No Balance of Performance, no ballast on a fast car. The best team still wins this season; the field gets a fair chance to **earn** its way back next season.
+3. **Prevent dynasties by self-balance, not handicaps** — forced disclosure means a leader's advantage is continuously *copied away*, so the field compresses on its own and no one runs off. **No Balance of Performance, no ballast, no success handicap.** The best team still wins — but narrowly, and only by *out-innovating* the copy.
 
-## The five new mechanisms (full treatment in `mechanism-design.md`)
+## The signature mechanisms (full treatment in `mechanism-design.md`)
 
-1. **Development-resource auctions** — every team gets an equal endowment of development "tokens" and allocates scarce wind-tunnel / CFD / dyno resource through a near-strategy-proof market. Rewards *prioritization merit*, reveals valuations, and kills the "whoever runs the tunnel most, wins" dynamic.
-2. **Dirty-air externality pricing** — measure each car's wake in a standard test and tax downforce that degrades the following car. A Pigouvian fix for the sport's central negative externality; the cure DRS only patches.
-3. **Money-neutral cap with adaptive convergence** — an *equal, hard* cap (no luxury-tax money leak), with the *dynamic* element placed on development handicapping rather than base budget.
-4. **Merit-weighted handicapping (inputs only)** — success buys you *less future development*, never a slower car. Calibrated to renew the field across seasons without inverting merit within one.
-5. **Merit estimators in the sporting rules** — a points curve, drop-results, and field-strength weighting tuned for signal-to-noise; neutralization procedures that preserve *earned* gaps; and an official, teammate-referenced **driver-merit rating** to disentangle car from driver.
+1. **Forced on-chain disclosure (the spine, M10)** — only on-chain parts are legal; every design is disclosed and copyable after a short head-start. R&D becomes a club good; advantages go transient.
+2. **The self-balancing economy (no tokens, M1 + M12)** — a money-neutral cap + a mandatory minimum-spend floor are the *whole* economy. The field balances by copying (everyone converges on the best on-chain parts); the floor forces continuous innovation. No development tokens, auction, or handicap needed.
+3. **Dirty-air externality pricing (M4)** — measure each car's wake and grant clean-wake cars a larger design-stage downforce allowance. A Pigouvian fix for the sport's central externality; the cure DRS only patches (so there's no DRS).
+4. **Merit estimators in the sporting rules (M6/M7)** — an all-finishers points curve tuned for signal-to-noise, and an official teammate-referenced **Driver-Merit Index** to disentangle car from driver.
+5. **Lapping elimination (M13)** — no blue flags; get lapped by P1 and you're out (P1 +1). A survival layer that also removes lapped-traffic luck.
 
 ## Non-goals
 

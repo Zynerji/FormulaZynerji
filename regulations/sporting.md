@@ -29,13 +29,13 @@
 2.2 **Drivers — Competition Licence.** Earned via a **feeder-series points ladder** (recognized junior categories award licence points by result) **plus** a minimum-distance test in a representative car, and a minimum age. This is a quality/safety filter *and* keeps the field a fair merit comparison (a weak entrant would bias both championships).
    > TODO: define the feeder-series points table and thresholds (the ladder depends on the series' junior ecosystem).
 
-2.3 **New-entrant ramp:** a new Constructor receives maximum development allocation and no handicap for a defined ramp period (`financial.md` Art. 3.5), and a share of redistributed data revenue (`financial.md` Art. 8.2) so a well-run new team can establish itself.
+2.3 **New-entrant ramp:** a new Constructor receives a defined grace on the minimum-spend floor (`financial.md` Art. 3.4) and a share of redistributed data revenue (`financial.md` Art. 8.2) so a well-run new team can establish itself. (There is no success handicap — none exists.)
 
 ---
 
 ## Article 3 — Event Format (M8)
 
-3.1 **Standard event:** Practice → Qualifying → Race. Practice is limited (in-season running is rationed for cost; the development resource is the auction/token system, `financial.md` Art. 3).
+3.1 **Standard event:** Practice → Qualifying → Race. Practice is limited (in-season running costs against the budget cap; development is limited by money alone — no token/auction system, `financial.md` Art. 3).
 
 3.2 **Qualifying — standard knockout.** Three knockout segments (Q1/Q2/Q3) set the grid on raw lap times (no track-evolution correction). Reading the track's evolution and timing your run to catch the best window is treated as **part of qualifying craft**, not luck to be engineered away — the conventional approach.
 
@@ -154,8 +154,7 @@ Each adds variance and a gaming surface without improving the merit estimate (th
 
 8.2 **No priced inter-competitor IP transfer** — disclosure is mandatory and copying is free (that is the whole economy). The F1 market for secrets is replaced by the originator-reward system (8.3).
 
-8.3 **Provenance & Innovation Index (M11).** On upload, each part is declared *original* or *derived from on-chain element X* (`technical.md` Art. 9.2). First-originators earn Development Tokens per adopting team (`financial.md` Art. 3.4) and are recorded on a published **Innovation Index**. A similarity check + dispute panel resolves contested attribution (all designs are public).
-   > TODO: whether the Innovation Index carries any championship credit (default: recognition only).
+8.3 **Provenance & Innovation Index (M11).** On upload, each part is declared *original* or *derived from on-chain element X* (`technical.md` Art. 9.2). First-originators are recorded on a published **Innovation Index** — **reputational recognition only; no tokens, no championship bounty** (the reward for innovating is the transient on-track head-start, `financial.md` Art. 3.2, 8.4). A similarity check + dispute panel resolves contested attribution (all designs are public).
 
 ---
 
@@ -170,7 +169,7 @@ Each adds variance and a gaming surface without improving the merit estimate (th
 
 10.1 **Cycle:** major revisions on a fixed multi-year cycle; minor clarifications annually; safety changes any time on cited evidence (the invariant). The rulebook itself is versioned on-chain (`design/blockchain-architecture.md` §2).
 
-10.2 Any change to a **mechanism's calibration** (cap, tokens, handicap, points curve, drop-count, dirty-air price, DMI model) must be justified against the objective — *does it raise `corr(Standings, Merit)`?* — and logged with that justification in `CHANGELOG.md`.
+10.2 Any change to a **mechanism's calibration** (cap, floor, points curve, dirty-air allowance, DMI model) must be justified against the objective — *does it raise `corr(Standings, Merit)`?* — and logged with that justification in `CHANGELOG.md`.
 
 10.3 Banning an existing legal technology requires a **supermajority of Constructors plus the governing body** — except safety changes, which the governing body may impose unilaterally on evidence (prevents competitive-threat bans dressed as safety).
 
@@ -184,5 +183,5 @@ Each adds variance and a gaming surface without improving the merit estimate (th
 
 11.2 **Data-revenue redistribution** (`financial.md` Art. 8.2) is weighted toward smaller teams, an additional floor under the grid.
 
-11.3 Combined with the money-neutral cap + minimum-spend floor (`financial.md` M1/M12) and the development handicap/auction (M2/M3), the intent is a grid where **results track merit, not budget, and the field stays full.**
+11.3 Combined with the money-neutral cap + minimum-spend floor (`financial.md` M1/M12) and the self-balancing copy economy (`financial.md` Art. 3), the intent is a grid where **results track merit, not budget, and the field stays full.**
    > TODO: set the prize-distribution curve and the qualifying/championship-position payout weighting.

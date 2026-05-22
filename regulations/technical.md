@@ -41,7 +41,7 @@
 
 3.2 **Centre-body aero — 2008 basis.** Bodywork between the wings (sidepods, engine cover, appendages) follows the more permissive **2008** body rules (Art. 4). The discipline on this freedom is not prescriptive geometry but the wake price (3.3).
 
-3.3 **Dirty-air externality pricing (M4).** Each homologated car's wake is measured on the Standard Aero Rig (the downforce loss it imposes on a reference following car). **The dirtier the wake, the more it costs** — charged on the *input* side (never as in-season weight/power; that would be BoP, R3). Default currency: a **Development-Token charge** (`financial.md` Art. 3).
+3.3 **Dirty-air externality pricing (M4).** Each homologated car's wake is measured on the Standard Aero Rig (the downforce loss it imposes on a reference following car). **The dirtier the wake, the less downforce the car is permitted** — a **design-stage downforce allowance**: a clean-wake car may run a higher downforce ceiling / larger reference volume, a dirty-wake car a lower one. Set at homologation (an **input**, never changed in-race; that would be BoP, R3) — so clean wake literally buys downforce. *(No tokens — v0.5.0.)*
    > TODO: define the wake metric + rig precisely and randomize test conditions (anti-overfit, R7); set the price schedule.
 
 3.4 **No DRS.** Close following and overtaking come from low-wake cars racing on merit (3.3), not a drag-reduction button. Movable aero, if any, is limited to safety/efficiency via the safety ECU (Art. 8).
