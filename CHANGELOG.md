@@ -2,6 +2,16 @@
 
 All notable changes to the ruleset are recorded here. Versioning: **MAJOR** = change to the objective or core mechanism set; **MINOR** = new article/mechanism; **PATCH** = clarification/typo. Mechanism *calibration* changes should be justified against the objective (does it improve `corr(Standings, Merit)`?) and logged with that justification.
 
+## [0.5.6] — 2026-05-22 — True CAD general arrangement (FreeCAD TechDraw HLR)
+
+**Wired up FreeCAD TechDraw for the GA.** The stylised matplotlib three-view is replaced (in the whitepaper, as **Figure 2**) by a real **hidden-line-removal** projection taken directly from the parametric `car_3d.step` solid. Two-stage, reproducible pipeline:
+- `drawings/freecad_ga.py` (headless `freecadcmd`) drives `TechDraw.project()` to compute true plan / side / front / isometric projected edges → `ga_edges.json`.
+- `drawings/render_ga.py` (matplotlib) composes the engineering sheet: the third-angle orthographic trio at one **true shared 1:1 scale**, a fit-to-box isometric (NTS), dimension callouts (wheelbase, length, width, track, height), a 1 m scale bar, the third-angle symbol, and a title block → `car_ga_cad.{pdf,svg,png}`.
+
+*(Why not the page/DXF route: headless `DrawViewPart.execute()` does not run HLR without the GUI, so `writeDXFPage` exports empty geometry — driving the `TechDraw.project()` HLR engine directly is the headless-correct path.)*
+
+Also nudged the `blockchain_economy` panel-C revenue boxes inward for clean right margins. Whitepaper recompiled (9 pp); all figures re-audited free of text bleed.
+
 ## [0.5.5] — 2026-05-22 — Fixed figure text-bleed + maximal local render (Blender hero)
 
 **Text bleed fixed & audited.** The `blockchain_economy` flowchart had labels overflowing their boxes (panel A legality boxes, panel C revenue boxes) — rebuilt with properly-sized boxes and concise labels. Audited every figure in the compiled PDF (blockchain, engine, 3D GA, diff, car GA, model plots): all text now contained.

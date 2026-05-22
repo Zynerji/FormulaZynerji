@@ -2,7 +2,7 @@
 
 **A redesign of the Formula 1 rulebook as mechanism design — built on a blockchain that forces every team to share its designs, so that cost and effort are synthesized into *merit* and the genuinely best team and driver win.**
 
-> Status: **v0.5.5 — draft** (car + competition complete; token-free self-balancing economy; cap & floor model-pinned; figures incl. Blender hero render; 9-page LaTeX whitepaper) · License: [`LICENSE`](LICENSE) (CC BY-SA 4.0) · Maintainer: cknopp@gmail.com
+> Status: **v0.5.6 — draft** (car + competition complete; token-free self-balancing economy; cap & floor model-pinned; figures incl. Blender hero render + FreeCAD-TechDraw CAD general arrangement; 9-page LaTeX whitepaper) · License: [`LICENSE`](LICENSE) (CC BY-SA 4.0) · Maintainer: cknopp@gmail.com
 >
 > **Read the whitepaper:** [`whitepaper/whitepaper.pdf`](whitepaper/whitepaper.pdf) (LaTeX source `whitepaper/whitepaper.tex`). Figures in [`drawings/`](drawings/) (2D vector + a 3D `car_3d.step`); economic model in [`modeling/`](modeling/).
 
