@@ -4,3 +4,16 @@ Thumbs.db
 *.swp
 .idea/
 .vscode/
+
+# LaTeX build aux (keep .tex and .pdf)
+*.aux
+*.log
+*.fls
+*.fdb_latexmk
+*.out
+*.synctex.gz
+*.toc
+
+# Python
+__pycache__/
+*.pyc

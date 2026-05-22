@@ -78,14 +78,16 @@ This is the decisive lever for the free-rider problem: **M10 forces sharing, M12
 
 ---
 
-## 6. The data-revenue stream
+## 6. The data-revenue stream — the R&D corpus as a product
 
-6.1 Chain data (designs, telemetry, manpower history) is a **product**. Access tiers:
-   - **Series / scrutineers:** full access.
-   - **Teams:** full access to all design ledgers (this *is* the forced disclosure).
-   - **Public / media / journalists:** **paid** access — the revenue stream.
+6.1 Forced disclosure makes the chain a continuously-growing, **cross-validated, race-proven engineering dataset** (designs, telemetry, materials, combustion/thermal/durability, control systems). It is a **product** with tiered access:
+   - **Series / scrutineers:** full access (governance).
+   - **Competitors (teams):** full, free — the forced-disclosure mechanism itself.
+   - **Media / journalists (standard tier, paid):** results, telemetry, standings, the Innovation Index, curated/narrative data.
+   - **Non-competing industry (premium "deep-data" tier, paid):** aerospace, defence, automotive and energy firms (**Boeing, Lockheed**, OEMs/suppliers) license full CAD/FEA/CFD, materials and test datasets, and control algorithms for their own R&D. **The largest stream** — the series is a shared, race-validated R&D lab whose output outside industry pays for.
+   - **Public / fans:** highlights, basic telemetry — cheap/free.
 
-6.2 **Revenue routing.** Data-sale revenue flows to a series pool and is **redistributed toward smaller teams** (a further input-equalizer). Revenue is **not** routed to originators — the innovator's reward is the head-start + recognition (§4.2), not a payment.
+6.2 **Revenue routing.** External-access revenue flows to a series pool and funds, in priority: **(a) the sport** (operations, chain infra, scrutineering, safety/medical); **(b) prize money** for all four championships (so teams earn from results — closing the economic loop, `regulations/sporting.md` Art. 11); **(c) redistribution toward smaller teams**. Revenue is **not** routed to originators (the innovator's reward is the head-start + recognition, §4.2). **Collective-value loop:** richer innovation → a more valuable data corpus → a bigger prize fund → a further reason to innovate, and disclosure is thereby compensated at the collective level.
 
 ---
 

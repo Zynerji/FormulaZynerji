@@ -100,10 +100,17 @@
 
 ## Article 8 — Data Revenue, Recognition & Manpower Ledger (M10)
 
-8.1 **Data revenue.** Chain data (designs, telemetry, manpower history) is sold to journalists/media/public via a paid access tier (`design/blockchain-architecture.md` §6). Teams have full access to all design ledgers regardless (that *is* the forced disclosure); the paid tier is the public/commercial product.
+8.1 **Tiered external data access — the series' R&D corpus is a product.** Forced disclosure (M10) turns the chain into a continuously-growing, **cross-validated, race-proven engineering dataset** — every team's CAD/FEA/CFD, telemetry, materials, combustion/thermal/durability and control-system data, with many teams independently attacking the same problems. Access is tiered:
+   - **Competitors (teams) — full, free.** This *is* the forced-disclosure mechanism; disclosure is how they compete.
+   - **Media / journalists — paid (standard tier).** Results, telemetry, standings, the Innovation Index, and curated/narrative data (design data summarised or time-delayed).
+   - **Non-competing industry — premium (deep-data tier).** Aerospace, defence, automotive and energy manufacturers and suppliers (e.g. **Boeing, Lockheed**, OEMs) license the **deep** data — full CAD/FEA/CFD, materials and combustion/thermal/durability datasets, control algorithms — for their own R&D. **This is the largest stream:** the series is, in effect, a shared, race-validated R&D lab whose output outside industry will pay for.
+   - **Public / fans — cheap or free.** Highlights, basic telemetry (engagement).
 
-8.2 **Revenue redistribution.** Data-sale revenue flows to a series pool and is **redistributed toward smaller teams** — an additional input-equalizer and part of closing the economic loop (`sporting.md` Art. 11).
-   > TODO: the redistribution formula (weighting to small teams).
+   Non-competitors pay because the data carries genuine R&D value; competitors get it free because *disclosing* is their competitive act.
+
+8.2 **Revenue routing — it funds the sport and the prizes.** External-access revenue flows to a series pool and pays for, in priority: (a) **series operations** (running the championship, the chain infrastructure, scrutineering, safety & medical); (b) **prize money** across all four classifications (Constructors', Drivers', Driver-Merit, Innovation Index) so teams **earn from results** — closing the economic loop (`sporting.md` Art. 11); and (c) **redistribution toward smaller teams** (an input-equalizer).
+   > **Collective-value loop:** richer innovation makes the pooled data *more valuable* to outside industry → a bigger prize fund → a further reason to innovate (reinforces M11/M12). It also **compensates disclosure at the collective level** — a team gives up secrecy, but the pool it feeds funds the prizes it can win.
+   > TODO: tier pricing; the operations / prize / redistribution split.
 
 8.3 **Manpower ledger.** Personnel are registered on-chain (team, role, hours), making labour cost natively auditable and closing the "hide spend in people" hole. Transfers are on-chain; an optional headcount limit is a further input-equalizer.
    > TODO: headcount limit (if any); transfer rules.

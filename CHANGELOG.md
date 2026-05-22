@@ -2,6 +2,16 @@
 
 All notable changes to the ruleset are recorded here. Versioning: **MAJOR** = change to the objective or core mechanism set; **MINOR** = new article/mechanism; **PATCH** = clarification/typo. Mechanism *calibration* changes should be justified against the objective (does it improve `corr(Standings, Merit)`?) and logged with that justification.
 
+## [0.5.2] — 2026-05-22 — Tiered data revenue + figures + LaTeX whitepaper
+
+**Revenue (financial.md Art. 8, blockchain-architecture.md §6):** the shared R&D corpus is now a **product with tiered external access** — competitors free; **media/journalists** paid; **non-competing industry (aerospace/defence/OEM — Boeing, Lockheed)** pay a premium **deep-data tier** (the largest stream). Revenue funds **the sport + prize money (4 championships) + small-team redistribution**, closing the economic loop; a collective-value loop ties richer innovation to a bigger prize fund. Diagram updated (`drawings/blockchain_economy`).
+
+**Figures (`drawings/`):** scripted, reproducible, vector (PDF/SVG/PNG):
+- 2D (matplotlib): `car_ga` (3-view GA + dims), `engine_uniflow` (cylinder cross-section + gas path), `diff_schematic` (twin wet-clutch, open-loop), `blockchain_economy` (legality + self-balance + revenue).
+- 3D (CadQuery): `car_3d` — parametric GA solid, **STEP exported (`car_3d.step`, committed)** + isometric/side render.
+
+**Whitepaper (`whitepaper/`):** `whitepaper.tex` → compiled to **`whitepaper.pdf`** (7 pp, LaTeX/pdflatex) pulling the formula together with all figures and the model results.
+
 ## [0.5.1] — 2026-05-22 — Economic modeling: cap & floor pinned
 
 Built an explicit model (`modeling/economy_model.py`, reproducible/seeded; write-up in `design/economic-modeling.md`) to pin the two keystone numbers instead of guessing.
