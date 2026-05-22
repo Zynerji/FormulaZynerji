@@ -20,3 +20,5 @@ __pycache__/
 
 # generated mesh intermediate (rebuilt by drawings/car_3d.py for the Blender render)
 drawings/car_parts.json
+# HLR projection intermediate (rebuilt by drawings/freecad_ga.py for the GA sheet)
+drawings/ga_edges.json
