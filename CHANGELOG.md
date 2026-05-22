@@ -2,6 +2,16 @@
 
 All notable changes to the ruleset are recorded here. Versioning: **MAJOR** = change to the objective or core mechanism set; **MINOR** = new article/mechanism; **PATCH** = clarification/typo. Mechanism *calibration* changes should be justified against the objective (does it improve `corr(Standings, Merit)`?) and logged with that justification.
 
+## [0.5.7] — 2026-05-22 — Engineering derivations + blockchain technical spec (synergy pass)
+
+Two high-synergy additions that turn assertions into derivations and concretize the spine. Each reuses existing components and feeds the whitepaper (now **12 pages**).
+
+**Engineering calcs (`modeling/`).**
+- `engine_cycle.py` — derives the engine's headline numbers from first principles (boost → intercooled charge density → trapped-air energy balance), instead of asserting them. Reaches **26 bar BMEP / 758 kW (1017 hp) @ 7000 rpm** from a **PR≈3.3** intercooled screw blower at λ1.3 and 44% brake thermal efficiency; cross-checks land in range (BSFC ~190 g/kWh, 86 mm square bore/stroke, ~20 m/s mean piston speed, 80 kg fuel ⇒ ~280 kW avg / 90 min). Figure: torque/power map + boost-for-BMEP. Updates `technical.md` Art. 6.4 and whitepaper Appendix B.
+- `aero_dirty_air.py` — makes the **M4** dirty-air price a concrete schedule: legal downforce allowance scaled by wake cleanliness $W$. Against an own-DF-vs-wake frontier it moves the privately-optimal design from **~45% follower-downforce loss (2021-gen) to ~16% (≈2022 target) at ~15% less realised downforce** — raceability by incentive, no BoP. Figure + `technical.md` Art. 3.3.
+
+**Blockchain technical spec (`design/blockchain-spec.md` + `drawings/blockchain_protocol.py`).** The implementable companion to `blockchain-architecture.md`: record schemas (`PartRecord`…), canonical-hash construction, and the precise **two-clause scrutineering** model — a *cryptographic* design-hash/timestamp check (secret/back-dated parts impossible) **plus** a *metrology* conformance check (the physical part matches the disclosed design within tolerance), since a manufactured part is never bit-identical to its CAD. Also the race-weekend protocol and external-access tiers. Corrects the loose "geometry hash + material" line in `technical.md` Art. 9.4; figure renders the gate + schema + scrutineering.
+
 ## [0.5.6] — 2026-05-22 — True CAD general arrangement (FreeCAD TechDraw HLR)
 
 **Wired up FreeCAD TechDraw for the GA.** The stylised matplotlib three-view is replaced (in the whitepaper, as **Figure 2**) by a real **hidden-line-removal** projection taken directly from the parametric `car_3d.step` solid. Two-stage, reproducible pipeline:

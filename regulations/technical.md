@@ -42,7 +42,8 @@
 3.2 **Centre-body aero — 2008 basis.** Bodywork between the wings (sidepods, engine cover, appendages) follows the more permissive **2008** body rules (Art. 4). The discipline on this freedom is not prescriptive geometry but the wake price (3.3).
 
 3.3 **Dirty-air externality pricing (M4).** Each homologated car's wake is measured on the Standard Aero Rig (the downforce loss it imposes on a reference following car). **The dirtier the wake, the less downforce the car is permitted** — a **design-stage downforce allowance**: a clean-wake car may run a higher downforce ceiling / larger reference volume, a dirty-wake car a lower one. Set at homologation (an **input**, never changed in-race; that would be BoP, R3) — so clean wake literally buys downforce. *(No tokens — v0.5.0.)*
-   > TODO: define the wake metric + rig precisely and randomize test conditions (anti-overfit, R7); set the price schedule.
+   > **Schedule (modeled, illustrative):** `modeling/aero_dirty_air.py` scales the legal downforce allowance by wake cleanliness $W$ (follower retention at a 10 m reference gap), keeping full allowance above $W\approx0.85$ and docking below it. Against an own-downforce-vs-wake design frontier, this moves the privately-optimal design from a ~45% follower-downforce loss (2021-generation, unraceable) to ~16% (near the 2022 ground-effect target) at only ~15% less realised downforce — raceability bought by private incentive, not BoP.
+   > TODO: define the wake metric + rig precisely and randomize test conditions (anti-overfit, R7); pin the production price schedule (the modeled one is a calibration sketch).
 
 3.4 **No DRS.** Close following and overtaking come from low-wake cars racing on merit (3.3), not a drag-reduction button. Movable aero, if any, is limited to safety/efficiency via the safety ECU (Art. 8).
 
@@ -125,8 +126,9 @@
 
 6.3 **Charge cooling:** intercooling/aftercooling permitted and expected (the engine wants a cool, dense charge).
 
-6.4 **Energy & Power caps (first pass):** peak power **≈758 kW (~1015 hp)**, peak torque **≈1035 N·m**, measured by a sealed Standard Logger. Derived as **BMEP 26 bar × 2.5 L × 7000 rpm / 600** (the 2-stroke power formula; `chassis-integration.md` §9c). At the 605 kg minimum this is **≈1.25 kW/kg (1.68 hp/kg) — turbo-era-F1 power-to-weight**, well above modern F1. Power knob: at 26 bar / 2.5 L, P ≈ 0.1083 × N kW (6900 rpm = 1000 hp).
-   > TODO: confirm BMEP 26 assumption against real 2-stroke-diesel data; set the per-km energy cap from race distance.
+6.4 **Energy & Power caps (first pass):** peak power **≈758 kW (~1015 hp)** at the 7000 rpm ceiling, peak torque **≈1155 N·m mid-range** (~1035 N·m at the power peak), measured by a sealed Standard Logger. Derived as **BMEP 26 bar × 2.5 L × 7000 rpm / 600** (the 2-stroke power formula; `chassis-integration.md` §9c). At the 605 kg minimum this is **≈1.25 kW/kg (1.68 hp/kg) — turbo-era-F1 power-to-weight**, well above modern F1. Power knob: at 26 bar / 2.5 L, P ≈ 0.1083 × N kW (6900 rpm = 1000 hp).
+   > **BMEP 26 confirmed achievable (modeled):** `modeling/engine_cycle.py` runs a boost→charge-density→energy balance and reaches 26 bar from a pressure-ratio ≈3.3 intercooled screw blower at λ1.3 (trapped AFR ~19) and 44% brake thermal efficiency. Cross-checks land in range: BSFC ~190 g/kWh, 86 mm square bore/stroke, ~20 m/s mean piston speed (below F1's ~25), and an 80 kg fuel load supports ~280 kW average over a 90-minute race. The required PR≈3.3 is aggressive — at the high end of single-stage screw practice.
+   > TODO: validate against real 2-stroke-diesel test data; set the per-km energy cap from race distance; confirm the screw stage (single high-helix vs two-stage).
 
 6.5 **Fuel: synthetic e-kerosene, JP-8 class — a single common fuel (Appendix T-B).** Fully synthetic (carbon-neutral), identical for every entrant — fuel is an **equalized input, not a development lever** (input-equalization, R3). Density-optimized (~0.84 kg/L) for compactness, cetane floor ≥50 for clean compression ignition in the uniflow engine, ultra-low sulfur, minimal additive package. **Race allowance ≈80 kg (~95 L)** — from ≈288 kW avg ÷ ~0.45 efficiency ÷ ~43 MJ/kg; only ~10 kg over F1's 70 kg despite ~40% more power (the diesel advantage).
    > Note: a hydrocarbon's ~43 MJ/kg is fixed, so density buys a *smaller tank* (packaging), not more power. Confirm the allowance and the density/cetane target.
@@ -207,7 +209,7 @@
 
 9.3 **Pre-season homologation:** full 2026 crash-test matrix (`safety.md` Art. 2) — no pass, no race, no waiver — plus the Standard Aero Rig wake measurement (Art. 3.3).
 
-9.4 **Scrutineering by hash.** A fitted part is legal iff it matches its on-chain record (geometry hash + material). Immutable timestamping makes back-dating and secret parts structurally impossible (R5, R7).
+9.4 **Scrutineering — two-clause (design-hash ✚ conformance).** A manufactured part is never bit-identical to its CAD, so legality is a two-clause test (full spec: `design/blockchain-spec.md` §4): **(i)** a *cryptographic* check that the fitted part cites an on-chain design whose canonicalized geometry hash is unaltered and whose timestamp precedes the Upload Deadline — making secret/back-dated parts structurally impossible (R5, R7); and **(ii)** a *metrology* check (CMM/scan) that the physical part conforms to that disclosed nominal geometry within its declared tolerance. Cheating thus collapses from "hide a secret part" (impossible) to "manufacture out of tolerance" (a conventional, detectable problem).
 
 9.5 **Event checks:** mass, Reference Plane wear, Standard Logger seal and cap compliance, tyre compliance, full safety check (`safety.md` Art. 6), plus randomized deep inspection of ≥1 car against its on-chain record.
 

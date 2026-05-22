@@ -2,6 +2,8 @@
 
 The **spine** of Formula Zynerji. Everything — rules, designs, data, manpower — lives on an immutable, timestamped ledger, and **only what is on the chain may run on the car.** This document explains the economic argument, what is on the chain, the legality model, the innovation incentive, and the open calibrations. It defines mechanisms **M10** (forced on-chain disclosure) and **M11** (originator rewards), now the primary instruments of the formula.
 
+> **Implementable companion:** [`blockchain-spec.md`](blockchain-spec.md) specifies the mechanics this document argues for — the record schemas (`PartRecord`…), the canonical-hash construction, the precise **two-clause scrutineering** model (design-hash ✚ physical-conformance), the race-weekend protocol, and the external-access tiers. Read this for the *why*, the spec for the *how*.
+
 ---
 
 ## 1. Why a blockchain — the economic argument
