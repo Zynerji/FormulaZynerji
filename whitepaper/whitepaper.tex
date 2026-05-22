@@ -80,4 +80,94 @@ Formula~Zynerji is, in one line, the engineering freedom of 1970s Formula~1 wear
 
 \vspace{1em}\noindent\small\textit{The full regulations (technical, sporting, safety, financial), the mechanism catalogue, the economic model, and the figure sources are openly available at \texttt{github.com/Zynerji/FormulaZynerji}.}
 
+\appendix
+
+\section{Mechanism catalogue (M1--M13)}
+Every rule traces to a mechanism. The nine design razors (R1--R9) that generate them --- e.g.\ \emph{equalise inputs, never outputs}; \emph{price externalities, don't prescribe around them}; \emph{design for the equilibrium, assume Goodhart} --- are set out in the project's \texttt{mechanism-design} document. ``Removed'' entries are retained for the record: they were superseded either by the self-balancing economy or by the move to conventional racing, and the table documents \emph{why} each was dropped.
+
+{\footnotesize
+\begin{center}
+\begin{tabular}{@{}p{0.045\textwidth} p{0.215\textwidth} p{0.50\textwidth} p{0.16\textwidth}@{}}
+\toprule
+\textbf{ID} & \textbf{Mechanism} & \textbf{Role} & \textbf{Status}\\
+\midrule
+M1 & Money-neutral hard cap & Equal, hard \$75\,M budget cap; no luxury-tax lane. Removes budget-bias. & Active\\
+M2 & Development-resource auction & Token market rationing wind-tunnel/CFD/dyno throughput. & Removed (self-balance)\\
+M3 & Merit-weighted handicap & Success-scaled cut to a team's \emph{future} development. & Removed (self-balance)\\
+M4 & Dirty-air externality pricing & Wake is measured; a clean-wake car earns a larger design-stage downforce allowance. Enables merit overtaking $\to$ no DRS. & Active\\
+M5 & Luck-suppressing neutralisation & Gap-preserving / time-neutral safety-car correction. & Removed (conventional racing)\\
+M6 & Championship-estimator design & All-finishers convex points curve (40$\to$1) tuned for signal-to-noise. & Active\\
+M7 & Driver-merit disentanglement & Advisory Driver-Merit Index: a Bayesian car-vs-driver split from teammate pairs. & Active\\
+M8 & Anti-gaming sporting rules & Sensor-measured track limits; broad parc-ferm\'e; scrutineering by hash. & Active\\
+M9 & Robust cost monitoring & Related-party pricing, randomised audits. & Subsumed by M10\\
+M10 & \textbf{Forced on-chain disclosure} & Only on-chain parts are legal; the spine. Collapses spend; advantages go transient. & Active (spine)\\
+M11 & Innovation incentive & The reward to innovate: transient head-start + Innovation-Index recognition (no tokens). & Active\\
+M12 & \textbf{Minimum-spend floor} & Mandatory $\geq$80\% of cap on development, $\geq$half original on-chain work; forecloses copy-only stagnation. & Active (keystone)\\
+M13 & Lapping elimination & No blue flags; lapped by the leader $\to$ black-flagged out, leader $+1$. Removes lapped-traffic luck. & Active\\
+\bottomrule
+\end{tabular}
+\end{center}}
+
+\noindent The active set is therefore: the blockchain spine (M10) and its two innovation safeguards (M11 carrot, M12 stick); a money cap (M1); dirty-air pricing (M4); and the competition estimators and rules (M6--M8, M13). The economy needs no artificial currency (M2/M3 gone), and output-side luck is left to conventional racing (M5 gone).
+
+\section{Dimension \& specification set}
+First-pass values; the era-kitbash basis and the derivation are in the project's \texttt{chassis-integration} document, the engine and systems in \texttt{technical.md}, and the cap/floor in \texttt{economic-modeling}.
+
+{\small
+\begin{center}
+\textbf{B.1 Era basis} \quad
+\begin{tabular}{@{}p{0.45\textwidth} p{0.30\textwidth}@{}}
+\toprule
+\textbf{System} & \textbf{Era basis}\\
+\midrule
+Front \& rear wings, floor, tyres, wheels, safety & 2026\\
+Suspension (hydraulically interconnected) & 2021\\
+Gearbox (7-speed + reverse) & 2013\\
+Chassis dimensions \& body rules & 2008\\
+Engine, vectoring diff, economy & new\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{minipage}[t]{0.48\textwidth}\centering
+\textbf{B.2 Dimensions \& mass}\\[2pt]
+\begin{tabular}{@{}p{0.62\textwidth} p{0.30\textwidth}@{}}
+\toprule
+\textbf{Parameter} & \textbf{Value}\\
+\midrule
+Wheelbase & 3300\,mm\\
+Overall length & $\approx$4850\,mm\\
+Max width & 1800\,mm\\
+Max height & 950\,mm\\
+Front / rear track & $\approx$1520 / 1425\,mm\\
+Wheels & 18\,in\\
+Tyre dia.\ F / R & $\approx$705 / 690\,mm\\
+Min.\ mass (car+driver, no fuel) & 605\,kg\\
+Race fuel & $\approx$80\,kg / 100\,L\\
+Floor & 2026 ground-effect, $\approx$0.92$\times$ scaled\\
+\bottomrule
+\end{tabular}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\textwidth}\centering
+\textbf{B.3 Powertrain \& economy}\\[2pt]
+\begin{tabular}{@{}p{0.50\textwidth} p{0.42\textwidth}@{}}
+\toprule
+\textbf{Parameter} & \textbf{Value}\\
+\midrule
+Engine & 2.5\,L I5 2-stroke uniflow diesel\\
+Induction & screw (Lysholm) supercharger\\
+BMEP / rev ceiling & 26\,bar / 7000\,rpm\\
+Peak power & $\approx$758\,kW ($\approx$1015\,hp)\\
+Peak torque & $\approx$1035\,N\,m\\
+Power-to-weight & $\approx$1.25\,kW/kg\\
+Injection & common-rail DI, $\approx$2500--3000\,bar\\
+Exhaust & electronic VLEM (set-and-run)\\
+Fuel & JP-8-class synthetic e-kerosene\\
+Budget cap / floor & \$75\,M / 80\% of cap\\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{center}}
+
 \end{document}

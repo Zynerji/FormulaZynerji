@@ -2,6 +2,10 @@
 
 All notable changes to the ruleset are recorded here. Versioning: **MAJOR** = change to the objective or core mechanism set; **MINOR** = new article/mechanism; **PATCH** = clarification/typo. Mechanism *calibration* changes should be justified against the objective (does it improve `corr(Standings, Merit)`?) and logged with that justification.
 
+## [0.5.3] — 2026-05-22 — Whitepaper fleshed out (M1–M13 catalogue + dimension appendix)
+
+`whitepaper/whitepaper.pdf` → **8 pages**. Added **Appendix A: the full M1–M13 mechanism catalogue** (ID · mechanism · role · status, with removed/subsumed entries documented) and **Appendix B: the dimension & specification set** (era basis; dimensions & mass; powertrain & economy tables). Recompiled.
+
 ## [0.5.2] — 2026-05-22 — Tiered data revenue + figures + LaTeX whitepaper
 
 **Revenue (financial.md Art. 8, blockchain-architecture.md §6):** the shared R&D corpus is now a **product with tiered external access** — competitors free; **media/journalists** paid; **non-competing industry (aerospace/defence/OEM — Boeing, Lockheed)** pay a premium **deep-data tier** (the largest stream). Revenue funds **the sport + prize money (4 championships) + small-team redistribution**, closing the economic loop; a collective-value loop ties richer innovation to a bigger prize fund. Diagram updated (`drawings/blockchain_economy`).
