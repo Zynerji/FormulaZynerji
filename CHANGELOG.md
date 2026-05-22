@@ -2,6 +2,10 @@
 
 All notable changes to the ruleset are recorded here. Versioning: **MAJOR** = change to the objective or core mechanism set; **MINOR** = new article/mechanism; **PATCH** = clarification/typo. Mechanism *calibration* changes should be justified against the objective (does it improve `corr(Standings, Merit)`?) and logged with that justification.
 
+## [0.5.4] — 2026-05-22 — Upgraded 3D GA render (PyVista, no GPU)
+
+`drawings/car_3d.py` reworked: a **lofted** CadQuery body (smooth taper + nose + sidepods + halo arc) replaces the blocky primitives, rendered with **PyVista** (real lighting, anti-aliasing, ground shadow) in lit isometric + side views. STEP re-exported (`car_3d.step`). Whitepaper recompiled with the new figure. (Technical figures kept accurate/parametric — no generative AI; the GPU/diffusion route was considered and deferred.)
+
 ## [0.5.3] — 2026-05-22 — Whitepaper fleshed out (M1–M13 catalogue + dimension appendix)
 
 `whitepaper/whitepaper.pdf` → **8 pages**. Added **Appendix A: the full M1–M13 mechanism catalogue** (ID · mechanism · role · status, with removed/subsumed entries documented) and **Appendix B: the dimension & specification set** (era basis; dimensions & mass; powertrain & economy tables). Recompiled.
